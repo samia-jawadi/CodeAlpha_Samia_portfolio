@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic meta tags for character set and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title that appears in browser tab -->
+    <title>Samia Jawadi | Computer Science Student</title>
+
+    <!-- External CSS libraries and local stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Welcome Animation Section -->
+    <!-- This appears first when page loads with a nice fade-in effect -->
+    <div
+      id="welcome-screen"
+      class="fixed inset-0 bg-gradient-to-br from-purple-900 to-gray-900 z-50 flex flex-col items-center justify-center transition-all duration-1500 ease-in-out"
+    >
+      <div class="relative">
+        <!-- Main welcome text with purple dot -->
+        <div
+          class="text-7xl font-bold text-white mb-6 animate-fade-in opacity-0"
+          style="animation-delay: 0.5s"
+        >
+          Welcome<span class="text-purple-300">.</span>
+        </div>
+
+        <!-- Subtitle text -->
+        <div
+          class="text-2xl text-purple-200 mb-12 animate-fade-in opacity-0"
+          style="animation-delay: 1s"
+        >
+          Samia Jawadi's Portfolio
+        </div>
+
+        <!-- Animated background pulse effect -->
+        <div class="absolute -inset-20 opacity-30 animate-pulse">
+          <div
+            class="absolute inset-0 bg-purple-500 rounded-full mix-blend-overlay filter-blur-xl animate-ping"
+            style="animation-delay: 0.7s"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <!-- Hidden initially, appears after welcome animation -->
+    <nav class="main-nav" style="display: none">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <!-- Logo/Name in top left -->
+        <a href="#" class="nav-logo">Samia<span>Jawadi</span></a>
+
+        <!-- Main navigation links -->
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Dark/Light mode toggle button -->
+        <button
+          id="themeToggle"
+          class="w-10 h-10 rounded-full bg-gray-800 text-white flex items-center justify-center"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section - First content section after header -->
+    <section class="hero-section" id="about" style="display: none">
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <!-- Left side content with introduction -->
+        <div class="hero-content md:w-1/2">
+          <div class="text-2xl mb-2 fade-in">
+            Hello<span class="wave">👋</span>
+            <!-- Friendly wave emoji -->
+          </div>
+
+          <!-- Main headline with gradient text effect -->
+          <h1 class="hero-title fade-in" style="animation-delay: 0.2s">
+            I'm <span class="text-gradient">Samia Jawadi</span>
+          </h1>
+
+          <!-- Subtitle with role information -->
+          <h2 class="hero-subtitle fade-in" style="animation-delay: 0.4s">
+            Computer Science Student at ISI Kef | Web Developer
+          </h2>
+
+          <!-- Short bio -->
+          <p class="fade-in" style="animation-delay: 0.4s">
+            Passionate about creating interactive web experiences while pursuing
+            my degree in Computer Science.
+          </p>
+
+          <!-- Call-to-action buttons -->
+          <div
+            class="flex flex-wrap fade-in"
+            style="animation-delay: 0.6s; margin-top: 2rem"
+          >
+            <a href="#contact" class="primary-btn mr-4 mb-4">Get In Touch</a>
+            <a href="#projects" class="primary-btn secondary-btn mb-4"
+              >View My Work</a
+            >
+          </div>
+        </div>
+
+        <!-- Right side with profile image -->
+        <div class="md:w-1/2 flex justify-center mt-10 md:mt-0 float-animation">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 dark:border-purple-300"
+          >
+            <img
+              src="./assets/about.jpeg"
+              alt="Samia Jawadi professional portrait"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section - Timeline of academic background -->
+    <section
+      id="education"
+      class="py-20 bg-gray-50 dark:bg-gray-900"
+      style="display: none"
+    >
+      <div class="container mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 fade-in">My Education</h2>
+          <p
+            class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto fade-in"
+            style="animation-delay: 0.2s"
+          >
+            My academic journey in computer science and technology.
+          </p>
+        </div>
+
+        <!-- Timeline container -->
+        <div class="relative">
+          <div class="education-timeline">
+            <!-- University Education Item -->
+            <div class="education-item mb-8 relative fade-in">
+              <div class="education-dot"></div>
+              <!-- Timeline dot -->
+              <div class="education-card">
+                <h3 class="text-xl font-semibold">
+                  Bachelor's in Computer Science
+                </h3>
+                <h4
+                  class="text-purple-600 dark:text-purple-400 font-medium mb-2"
+                >
+                  Higher Institute of Computer Science (ISI Kef)
+                </h4>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                  2023 - Present (Expected Graduation: 2026)
+                </p>
+                <ul
+                  class="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2"
+                >
+                  <li>
+                    Specializing in software engineering and web technologies
+                  </li>
+                  <li>
+                    Coursework includes algorithms, databases, web development,
+                    and software engineering
+                  </li>
+                  <li>
+                    Active participant in university coding workshops and events
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- High School Education Item -->
+            <div class="education-item mb-8 relative fade-in">
+              <div class="education-dot"></div>
+              <!-- Timeline dot -->
+              <div class="education-card">
+                <h3 class="text-xl font-semibold">High School Diploma</h3>
+                <h4
+                  class="text-purple-600 dark:text-purple-400 font-medium mb-2"
+                >
+                  Lycée El Beji elùmasoudi El krib
+                </h4>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                  2019 - 2023
+                </p>
+                <ul
+                  class="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-2"
+                >
+                  <li>Graduated with honors in Mathematics</li>
+                  <li>
+                    Developed a strong foundation in programming languages
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section - Showcase of technical abilities -->
+    <section id="skills" class="py-20" style="display: none">
+      <div class="container mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 fade-in">My Skills</h2>
+          <p
+            class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto fade-in"
+            style="animation-delay: 0.2s"
+          >
+            Technologies I've worked with and continue to learn.
+          </p>
+        </div>
+
+        <!-- Skills grid with 4 categories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Frontend Skills Card -->
+          <div class="education-card fade-in">
+            <div class="text-purple-500 text-4xl mb-4 skill-icon">
+              <i class="fab fa-react"></i>
+              <!-- React icon -->
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Frontend Development</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              React, JavaScript, HTML/CSS
+            </p>
+          </div>
+
+          <!-- Backend Skills Card -->
+          <div class="education-card fade-in" style="animation-delay: 0.2s">
+            <div class="text-purple-500 text-4xl mb-4 skill-icon">
+              <i class="fas fa-server"></i>
+              <!-- Server icon -->
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Backend Development</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Python, REST APIs, Java
+            </p>
+          </div>
+
+          <!-- Database Skills Card -->
+          <div class="education-card fade-in" style="animation-delay: 0.3s">
+            <div class="text-purple-500 text-4xl mb-4 skill-icon">
+              <i class="fas fa-database"></i>
+              <!-- Database icon -->
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Databases</h3>
+            <p class="text-gray-600 dark:text-gray-300">MySQL</p>
+          </div>
+
+          <!-- Other Skills Card -->
+          <div class="education-card fade-in" style="animation-delay: 0.4s">
+            <div class="text-purple-500 text-4xl mb-4 skill-icon">
+              <i class="fas fa-code-branch"></i>
+              <!-- Code branch icon -->
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Other Technologies</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Git, Testing (Jest), Agile Methodologies
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section - Showcase of portfolio work -->
+    <section
+      id="projects"
+      class="py-20 bg-gray-50 dark:bg-gray-900"
+      style="display: none"
+    >
+      <div class="container mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 fade-in">My Projects</h2>
+          <p
+            class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto fade-in"
+            style="animation-delay: 0.2s"
+          >
+            Here are some of my recent projects that showcase my skills and
+            learning.
+          </p>
+        </div>
+
+        <!-- Projects grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Typing Speed Test -->
+          <div class="project-card fade-in">
+            <div class="project-image-container">
+              <img
+                src="assets/typing_speed_project.png"
+                alt="Typing Speed Test"
+                class="project-image"
+              />
+            </div>
+            <div class="p-6">
+              <!-- Technology tags -->
+              <div class="flex flex-wrap mb-4">
+                <span class="project-tag">React</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML/CSS</span>
+              </div>
+
+              <!-- Project title and description -->
+              <h3 class="text-xl font-semibold mb-2">Typing Speed Test</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                A web application that measures typing speed and accuracy in
+                real-time with WPM calculation.
+              </p>
+
+              <!-- Project links -->
+              <div class="flex flex-wrap">
+                <a
+                  href="https://typingspeedtester1.netlify.app/"
+                  class="text-purple-600 dark:text-purple-400 font-medium mr-6 flex items-center mb-2"
+                >
+                  <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                </a>
+                <a
+                  href="https://github.com/samia-jawadi/typing_speed_test"
+                  class="text-purple-600 dark:text-purple-400 font-medium flex items-center mb-2"
+                >
+                  <i class="fab fa-github mr-2"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Music Player -->
+          <div class="project-card fade-in" style="animation-delay: 0.2s">
+            <div class="project-image-container">
+              <img
+                src="assets/samia_music_player.png"
+                alt="Music Player"
+                class="project-image"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap mb-4">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML/CSS</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Samia Music Player</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                A personal music player showcasing original songs with playback
+                controls and responsive design.
+              </p>
+              <div class="flex flex-wrap">
+                <a
+                  href="https://samia-music-player.netlify.app/"
+                  class="text-purple-600 dark:text-purple-400 font-medium mr-6 flex items-center mb-2"
+                >
+                  <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                </a>
+                <a
+                  href="https://github.com/samia-jawadi/CodeAlpha__Samia_music_player"
+                  class="text-purple-600 dark:text-purple-400 font-medium flex items-center mb-2"
+                >
+                  <i class="fab fa-github mr-2"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Tunisia Gallery -->
+          <div class="project-card fade-in" style="animation-delay: 0.3s">
+            <div class="project-image-container">
+              <img
+                src="assets/tunisia_gallery.png"
+                alt="Tunisia Gallery"
+                class="project-image"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap mb-4">
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">HTML/CSS</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Tunisia Gallery</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Interactive gallery showcasing Tunisia's beauty with category
+                filtering and lightbox viewer.
+              </p>
+              <div class="flex flex-wrap">
+                <a
+                  href="https://samia-jawadi.github.io/CodeAlpha_Tunisia_image_Gallery/"
+                  class="text-purple-600 dark:text-purple-400 font-medium mr-6 flex items-center mb-2"
+                >
+                  <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                </a>
+                <a
+                  href="https://github.com/samia-jawadi/CodeAlpha_Tunisia_image_Gallery"
+                  class="text-purple-600 dark:text-purple-400 font-medium flex items-center mb-2"
+                >
+                  <i class="fab fa-github mr-2"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section - How to get in touch -->
+    <section id="contact" class="py-20" style="display: none">
+      <div class="container mx-auto px-6">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Have a question or want to collaborate? Email me directly:
+          </p>
+        </div>
+
+        <!-- Email contact button and info -->
+        <div class="text-center">
+          <a
+            href="mailto:jawadisamia29@gmail.com?subject=Portfolio Contact"
+            class="primary-btn inline-block"
+          >
+            <i class="fas fa-envelope mr-2"></i> Send Email
+          </a>
+          <p class="mt-4 text-gray-500 dark:text-gray-400">
+            Or copy: jawadisamia29@gmail.com
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer - Bottom of page with navigation and social links -->
+    <footer class="bg-gray-900 text-white py-12" style="display: none">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center">
+          <!-- Footer logo/name -->
+          <a href="#" class="text-2xl font-bold mb-6"
+            >Samia<span class="text-purple-400">Jawadi</span></a
+          >
+
+          <!-- Footer navigation links -->
+          <div class="flex flex-wrap justify-center gap-6 mb-8">
+            <a href="#about" class="hover:text-purple-400 transition">About</a>
+            <a href="#skills" class="hover:text-purple-400 transition"
+              >Skills</a
+            >
+            <a href="#projects" class="hover:text-purple-400 transition"
+              >Projects</a
+            >
+            <a href="#education" class="hover:text-purple-400 transition"
+              >Education</a
+            >
+            <a href="#contact" class="hover:text-purple-400 transition"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Social media links -->
+          <div class="flex space-x-6 mb-8">
+            <a
+              href="https://github.com/samia-jawadi"
+              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jawadi-samia-817b5b33a/"
+              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+
+          <!-- Copyright notice -->
+          <p class="text-gray-400 text-sm">
+            © 2025 Samia Jawadi. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript file for interactive functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
